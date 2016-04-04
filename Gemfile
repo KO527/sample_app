@@ -31,6 +31,10 @@ gem 'rails_admin', git: 'git://github.com/sferik/rails_admin.git'
 # Trees
 gem 'ancestry'
 
+# Refile for file uploads/images
+gem 'refile', require: 'refile/rails'
+gem 'refile-mini_magick'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
