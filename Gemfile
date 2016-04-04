@@ -20,7 +20,7 @@ gem 'turbolinks'
 gem 'puma'
 
 # Devise (accounts/auth)
-gem 'devise', :github => 'plataformatec/devise', :branch => 'master'
+gem 'devise', github: 'plataformatec/devise', branch: 'master'
 
 # Foundation (frontend framework)
 gem 'foundation-rails'

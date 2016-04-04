@@ -34,4 +34,14 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model Category do
+    field :title
+    field :image
+    field :parent_id, :enum do
+      enum_method do
+        :parent_enum
+      end
+    end
+  end
 end
