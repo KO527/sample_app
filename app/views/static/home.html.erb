@@ -1,8 +1,10 @@
 <div class="row">
-  <div class="small-6 columns">
-    <%= render partial: 'shared/categories' %>
+  <div class="small-4 columns">
+    <ul class="vertical accordion-menu menu" data-accordion-menu>
+      <%= render partial: 'shared/categories', locals: { categories: @categories, level: 0 } %>
+    </ul>
   </div>
-  <div class="small-6 columns">
+  <div class="small-8 columns">
 
   </div>
 </div>
