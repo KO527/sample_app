@@ -22,9 +22,6 @@ gem 'puma'
 # Devise (accounts/auth)
 gem 'devise', github: 'plataformatec/devise', branch: 'master'
 
-# Foundation (frontend framework)
-gem 'foundation-rails'
-
 # Rails Admin
 gem 'rails_admin', git: 'git://github.com/sferik/rails_admin.git'
 
