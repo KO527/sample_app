@@ -2,79 +2,69 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bb03f4d-1fa7-46a2-a9ec-151d7f3387ec" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fonts/fontawesome-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fonts/fontello.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fonts/fontello.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fonts/fontello.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fonts/fontello/fontello.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fonts/fontello/fontello.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fonts/fontello/fontello.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/bxslider/images/bx_loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/bxslider/images/controls.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/bootstrap-theme.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/fileinput.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/fontello.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/longshadow.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fonts/fontello.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fonts/fontello/fontello.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/autocomplete/autocomplete-demo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/autocomplete/countries.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/autocomplete/jquery-1.8.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/autocomplete/jquery-2.1.1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/autocomplete/jquery.autocomplete.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/autocomplete/jquery.autocomplete.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/autocomplete/jquery.mockjax.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/autocomplete/usastates.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/bxslider/jquery.bxslider.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/bxslider/jquery.bxslider.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/bxslider/jquery.bxslider.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/bxslider/plugins/jquery.easing.1.3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/bxslider/plugins/jquery.fitvids.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/footable-bootstrap.latest/css/footable.bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/footable-bootstrap.latest/css/footable.bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/footable-bootstrap.latest/js/footable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/footable-bootstrap.latest/js/footable.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/jquery.fs.scroller/jquery.fs.scroller.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/jquery.fs.scroller/jquery.fs.scroller.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/jquery.fs.scroller/jquery.fs.scroller.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/jquery.fs.scroller/jquery.fs.scroller.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/jquery.fs.selecter/autocomplete/autocomplete-demo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/jquery.fs.selecter/autocomplete/countries.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/jquery.fs.selecter/autocomplete/jquery-1.8.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/jquery.fs.selecter/autocomplete/jquery-2.1.1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/jquery.fs.selecter/autocomplete/jquery.autocomplete.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/jquery.fs.selecter/autocomplete/jquery.autocomplete.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/jquery.fs.selecter/autocomplete/jquery.mockjax.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/jquery.fs.selecter/autocomplete/usastates.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/jquery.fs.selecter/jquery.fs.selecter.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/jquery.fs.selecter/jquery.fs.selecter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/jquery.fs.selecter/jquery.fs.selecter.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/jquery.fs.selecter/jquery.fs.selecter.min.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/_settings.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/foundation_and_overrides.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/menu.scss" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/assets/stylesheets/fontello.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/fonts/fontawesome-webfont.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/fonts/fontello.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/fonts/fontello.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/fonts/fontello.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/fonts/fontello.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/fonts/fontello/fontello.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/fonts/fontello/fontello.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/fonts/fontello/fontello.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/fonts/fontello/fontello.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/autocomplete/autocomplete-demo.js" afterPath="$PROJECT_DIR$/vendor/assets/plugins/jquery.fs.selecter/autocomplete/autocomplete-demo.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/autocomplete/countries.js" afterPath="$PROJECT_DIR$/vendor/assets/plugins/jquery.fs.selecter/autocomplete/countries.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/autocomplete/jquery-1.8.2.min.js" afterPath="$PROJECT_DIR$/vendor/assets/plugins/autocomplete/jquery-1.8.2.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/autocomplete/jquery-2.1.1.js" afterPath="$PROJECT_DIR$/vendor/assets/plugins/autocomplete/jquery-2.1.1.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/autocomplete/jquery.autocomplete.js" afterPath="$PROJECT_DIR$/vendor/assets/plugins/jquery.fs.selecter/autocomplete/jquery.autocomplete.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/autocomplete/jquery.autocomplete.min.js" afterPath="$PROJECT_DIR$/vendor/assets/plugins/jquery.fs.selecter/autocomplete/jquery.autocomplete.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/autocomplete/jquery.mockjax.js" afterPath="$PROJECT_DIR$/vendor/assets/plugins/jquery.fs.selecter/autocomplete/jquery.mockjax.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/autocomplete/usastates.js" afterPath="$PROJECT_DIR$/vendor/assets/plugins/jquery.fs.selecter/autocomplete/usastates.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/bxslider/images/bx_loader.gif" afterPath="$PROJECT_DIR$/vendor/assets/plugins/bxslider/images/bx_loader.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/bxslider/images/controls.png" afterPath="$PROJECT_DIR$/vendor/assets/plugins/bxslider/images/controls.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/bxslider/jquery.bxslider.css" afterPath="$PROJECT_DIR$/vendor/assets/plugins/bxslider/jquery.bxslider.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/bxslider/jquery.bxslider.js" afterPath="$PROJECT_DIR$/vendor/assets/plugins/bxslider/jquery.bxslider.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/bxslider/jquery.bxslider.min.js" afterPath="$PROJECT_DIR$/vendor/assets/plugins/bxslider/jquery.bxslider.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/bxslider/plugins/jquery.easing.1.3.js" afterPath="$PROJECT_DIR$/vendor/assets/plugins/bxslider/plugins/jquery.easing.1.3.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/bxslider/plugins/jquery.fitvids.js" afterPath="$PROJECT_DIR$/vendor/assets/plugins/bxslider/plugins/jquery.fitvids.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/footable-bootstrap.latest/css/footable.bootstrap.css" afterPath="$PROJECT_DIR$/vendor/assets/plugins/footable-bootstrap.latest/css/footable.bootstrap.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/footable-bootstrap.latest/css/footable.bootstrap.min.css" afterPath="$PROJECT_DIR$/vendor/assets/plugins/footable-bootstrap.latest/css/footable.bootstrap.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/footable-bootstrap.latest/js/footable.js" afterPath="$PROJECT_DIR$/vendor/assets/plugins/footable-bootstrap.latest/js/footable.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/footable-bootstrap.latest/js/footable.min.js" afterPath="$PROJECT_DIR$/vendor/assets/plugins/footable-bootstrap.latest/js/footable.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/jquery.fs.scroller/jquery.fs.scroller.css" afterPath="$PROJECT_DIR$/vendor/assets/plugins/jquery.fs.scroller/jquery.fs.scroller.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/jquery.fs.scroller/jquery.fs.scroller.js" afterPath="$PROJECT_DIR$/vendor/assets/plugins/jquery.fs.scroller/jquery.fs.scroller.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/jquery.fs.scroller/jquery.fs.scroller.min.css" afterPath="$PROJECT_DIR$/vendor/assets/plugins/jquery.fs.scroller/jquery.fs.scroller.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/jquery.fs.scroller/jquery.fs.scroller.min.js" afterPath="$PROJECT_DIR$/vendor/assets/plugins/jquery.fs.scroller/jquery.fs.scroller.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/jquery.fs.selecter/autocomplete/autocomplete-demo.js" afterPath="$PROJECT_DIR$/vendor/assets/plugins/autocomplete/autocomplete-demo.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/jquery.fs.selecter/autocomplete/countries.js" afterPath="$PROJECT_DIR$/vendor/assets/plugins/autocomplete/countries.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/jquery.fs.selecter/autocomplete/jquery-1.8.2.min.js" afterPath="$PROJECT_DIR$/vendor/assets/plugins/jquery.fs.selecter/autocomplete/jquery-1.8.2.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/jquery.fs.selecter/autocomplete/jquery-2.1.1.js" afterPath="$PROJECT_DIR$/vendor/assets/plugins/jquery.fs.selecter/autocomplete/jquery-2.1.1.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/jquery.fs.selecter/autocomplete/jquery.autocomplete.js" afterPath="$PROJECT_DIR$/vendor/assets/plugins/autocomplete/jquery.autocomplete.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/jquery.fs.selecter/autocomplete/jquery.autocomplete.min.js" afterPath="$PROJECT_DIR$/vendor/assets/plugins/autocomplete/jquery.autocomplete.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/jquery.fs.selecter/autocomplete/jquery.mockjax.js" afterPath="$PROJECT_DIR$/vendor/assets/plugins/autocomplete/jquery.mockjax.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/jquery.fs.selecter/autocomplete/usastates.js" afterPath="$PROJECT_DIR$/vendor/assets/plugins/autocomplete/usastates.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/jquery.fs.selecter/jquery.fs.selecter.css" afterPath="$PROJECT_DIR$/vendor/assets/plugins/jquery.fs.selecter/jquery.fs.selecter.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/jquery.fs.selecter/jquery.fs.selecter.js" afterPath="$PROJECT_DIR$/vendor/assets/plugins/jquery.fs.selecter/jquery.fs.selecter.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/jquery.fs.selecter/jquery.fs.selecter.min.css" afterPath="$PROJECT_DIR$/vendor/assets/plugins/jquery.fs.selecter/jquery.fs.selecter.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/plugins/jquery.fs.selecter/jquery.fs.selecter.min.js" afterPath="$PROJECT_DIR$/vendor/assets/plugins/jquery.fs.selecter/jquery.fs.selecter.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_categories.html.erb" afterPath="$PROJECT_DIR$/app/views/shared/_categories.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/shared/_nav.html.erb" afterPath="$PROJECT_DIR$/app/views/shared/_nav.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/assets.rb" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/stylesheets/longshadow.css" afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/longshadow.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/stylesheets/style.css" afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/style.css" />
     </list>
     <ignored path="ag.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -101,8 +91,8 @@
           <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Gemfile">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="252">
-                  <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+                <state relative-caret-position="312">
+                  <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -111,18 +101,8 @@
           <file leaf-file-name="static_controller.rb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/controllers/static_controller.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="30">
-                  <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="_nav.html.erb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/views/shared/_nav.html.erb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+                <state relative-caret-position="75">
+                  <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -131,8 +111,8 @@
           <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="441">
-                  <caret line="43" column="92" selection-start-line="43" selection-start-column="92" selection-end-line="43" selection-end-column="92" />
+                <state relative-caret-position="135">
+                  <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
                   <folding>
                     <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                   </folding>
@@ -140,31 +120,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="_links.html.erb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/views/devise/shared/_links.html.erb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="75">
-                  <caret line="5" column="64" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="64" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="application.scss" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
+          <file leaf-file-name="_nav.html.erb" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/views/shared/_nav.html.erb">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="195">
-                  <caret line="13" column="86" selection-start-line="13" selection-start-column="86" selection-end-line="13" selection-end-column="86" />
+                  <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="_categories.html.erb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/views/shared/_categories.html.erb">
+          <file leaf-file-name="longshadow.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/vendor/assets/stylesheets/longshadow.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <state relative-caret-position="120">
+                  <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
                   <folding />
                 </state>
               </provider>
@@ -173,8 +143,18 @@
           <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/vendor/assets/stylesheets/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="14" />
+                <state relative-caret-position="300">
+                  <caret line="35" column="69" selection-start-line="35" selection-start-column="69" selection-end-line="35" selection-end-column="69" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="application.scss" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="270">
+                  <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -224,12 +204,17 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/foundation_and_overrides.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/main.scss" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
-        <option value="$PROJECT_DIR$/app/views/shared/_categories.html.erb" />
+        <option value="$PROJECT_DIR$/config/initializers/assets.rb" />
+        <option value="$PROJECT_DIR$/vendor/assets/stylesheets/font-awesome.css" />
+        <option value="$PROJECT_DIR$/vendor/assets/stylesheets/fontello.css" />
         <option value="$PROJECT_DIR$/vendor/assets/stylesheets/style.css" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/fontello.css.scss.erb" />
+        <option value="$PROJECT_DIR$/app/views/shared/_categories.html.erb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/views/shared/_nav.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
+        <option value="$PROJECT_DIR$/vendor/assets/stylesheets/longshadow.css" />
         <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
       </list>
     </option>
@@ -241,10 +226,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1810" />
-    <option name="y" value="-50" />
-    <option name="width" value="1742" />
-    <option name="height" value="1040" />
+    <option name="x" value="-1833" />
+    <option name="y" value="39" />
+    <option name="width" value="1604" />
+    <option name="height" value="964" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -323,6 +308,60 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="initializers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -339,6 +378,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shared" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -377,14 +438,6 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="devise" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -400,55 +453,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="devise" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shared" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="devise" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sessions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ag" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="stylesheets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -484,8 +493,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/vendor" />
+      <recent name="$PROJECT_DIR$/app/assets" />
       <recent name="$PROJECT_DIR$/app/assets/stylesheets" />
+      <recent name="$PROJECT_DIR$/vendor/assets" />
+      <recent name="$PROJECT_DIR$/app/assets/fonts" />
+      <recent name="$PROJECT_DIR$/vendor" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/vendor/assets/stylesheets" />
@@ -1213,15 +1225,15 @@
       <updated>1459785331665</updated>
       <workItem from="1459785333518" duration="6551000" />
       <workItem from="1459860759675" duration="3243000" />
-      <workItem from="1459883278024" duration="13540000" />
+      <workItem from="1459883278024" duration="18263000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23334000" />
+    <option name="totallyTimeSpent" value="28057000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1810" y="-50" width="1742" height="1040" extended-state="0" />
+    <frame x="-1833" y="39" width="1604" height="964" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1232,10 +1244,10 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14727086" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23240224" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1641791" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17830424" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1401,14 +1413,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/static_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/static.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1457,7 +1461,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/font-awesome.css">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/font-awesome.css.scss.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-435">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1465,7 +1469,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/fontello.css">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/fontello.css.scss.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1490,22 +1494,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/bootstrap/js/npm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/assets/stylesheets/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1577,14 +1565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_categories.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/assets/stylesheets/fileinput.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1593,7 +1573,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/assets/stylesheets/fontello.css">
+    <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="63" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/assets/stylesheets/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1601,18 +1589,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
+    <entry file="file://$PROJECT_DIR$/app/controllers/static_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="86" selection-start-line="13" selection-start-column="86" selection-end-line="13" selection-end-column="86" />
+        <state relative-caret-position="75">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/assets/stylesheets/style.css">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/fontello.css.scss.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="14" />
+        <state relative-caret-position="165">
+          <caret line="11" column="97" selection-start-line="11" selection-start-column="97" selection-end-line="11" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/shared/_categories.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/font-awesome.css.scss.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="588" column="20" selection-start-line="588" selection-start-column="20" selection-end-line="588" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1625,14 +1637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_nav.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/devise/shared/_links.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1641,10 +1645,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/shared/_nav.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/assets/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="35" column="69" selection-start-line="35" selection-start-column="69" selection-end-line="35" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/assets/stylesheets/longshadow.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="43" column="92" selection-start-line="43" selection-start-column="92" selection-end-line="43" selection-end-column="92" />
+        <state relative-caret-position="135">
+          <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
