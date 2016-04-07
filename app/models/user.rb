@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
 
   enum role: [:buyer, :seller]
   enum gender: [:male, :female]
+
+  geocoded_by :address
 end

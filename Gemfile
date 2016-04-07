@@ -35,6 +35,9 @@ gem 'refile-mini_magick'
 # Icons
 gem 'font-awesome-rails'
 
+# Address Geocoding
+gem 'geocoder'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
