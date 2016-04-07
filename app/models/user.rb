@@ -8,4 +8,5 @@ class User < ActiveRecord::Base
   enum gender: [:male, :female]
 
   geocoded_by :address
+  after_validation :geocode
 end
