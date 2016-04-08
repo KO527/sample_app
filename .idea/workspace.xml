@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bb03f4d-1fa7-46a2-a9ec-151d7f3387ec" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
     </list>
     <ignored path="ag.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,7 +33,7 @@
                   <caret line="53" column="49" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="49" />
                   <folding>
                     <element signature="n#style#0;n#div#1;n#div#0;n#div#11;n#fieldset#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                    <marker date="1460131256000" expanded="true" signature="4187:4214" placeholder="..." />
+                    <marker date="1460137234000" expanded="true" signature="4187:4214" placeholder="..." />
                   </folding>
                 </state>
               </provider>
@@ -44,8 +42,8 @@
           <file leaf-file-name="schema.rb" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/db/schema.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+                <state relative-caret-position="119">
+                  <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
                   <folding />
                 </state>
               </provider>
@@ -90,8 +88,8 @@
           <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="156" column="42" selection-start-line="156" selection-start-column="42" selection-end-line="156" selection-end-column="42" />
+                <state relative-caret-position="240">
+                  <caret line="154" column="65" selection-start-line="154" selection-start-column="65" selection-end-line="154" selection-end-column="65" />
                   <folding />
                 </state>
               </provider>
@@ -154,8 +152,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1776" />
-    <option name="y" value="-140" />
+    <option name="x" value="-1395" />
+    <option name="y" value="-99" />
     <option name="width" value="1298" />
     <option name="height" value="1023" />
   </component>
@@ -1117,15 +1115,15 @@
       <updated>1459785331665</updated>
       <workItem from="1459785333518" duration="6551000" />
       <workItem from="1459860759675" duration="3243000" />
-      <workItem from="1459883278024" duration="30362000" />
+      <workItem from="1459883278024" duration="30836000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40156000" />
+    <option name="totallyTimeSpent" value="40630000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1776" y="-140" width="1298" height="1023" extended-state="0" />
+    <frame x="-1395" y="-99" width="1298" height="1023" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1569,16 +1567,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+        <state relative-caret-position="119">
+          <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="156" column="42" selection-start-line="156" selection-start-column="42" selection-end-line="156" selection-end-column="42" />
+        <state relative-caret-position="240">
+          <caret line="154" column="65" selection-start-line="154" selection-start-column="65" selection-end-line="154" selection-end-column="65" />
           <folding />
         </state>
       </provider>
