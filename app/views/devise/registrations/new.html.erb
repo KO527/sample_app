@@ -1,29 +1,168 @@
-<h2>Sign up</h2>
+<div class="main-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 page-content">
+        <div class="inner-box category-content">
+          <h2 class="title-2"><i class="fa fa-user-plus"></i> Create your account, Its free </h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+          <div class="row">
+            <div class="col-sm-12">
+              <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'form-horizontal'}) do |f| %>
+                <%= devise_error_messages! %>
+                <fieldset>
+                  <div class="form-group required">
+                    <label class="col-md-4 control-label">You are a <sup>*</sup></label>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+                    <div class="col-md-6">
+                      <div class="radio">
+                        <label><%= f.radio_button :role, :buyer, checked: true %> Buyer </label>
+                      </div>
+                      <div class="radio">
+                        <label><%= f.radio_button :role, :seller %> Seller </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Text input-->
+                  <div class="form-group required">
+                    <%= f.label :first_name, 'First Name <sup>*</sup>'.html_safe, class: 'col-md-4 control-label' %>
+
+                    <div class="col-md-6">
+                      <%= f.text_field :first_name, autofocus: true, class: 'form-control input-md', placeholder: 'First Name' %>
+                    </div>
+                  </div>
+
+                  <!-- Text input-->
+                  <div class="form-group required">
+                    <%= f.label :last_name, 'Last Name <sup>*</sup>'.html_safe, class: 'col-md-4 control-label' %>
+
+                    <div class="col-md-6">
+                      <%= f.text_field :last_name, autofocus: true, class: 'form-control input-md', placeholder: 'Last Name' %>
+                    </div>
+                  </div>
+
+                  <!-- Text input-->
+                  <div class="form-group required">
+                    <%= f.label :phone_number, 'Phone Number <sup>*</sup>'.html_safe, class: 'col-md-4 control-label' %>
+
+                    <div class="col-md-6">
+                      <%= f.telephone_field :phone_number, autofocus: true, class: 'form-control input-md', placeholder: 'Phone Number' %>
+                    </div>
+                  </div>
+
+                  <!-- Textarea -->
+                  <div class="form-group required">
+                    <%= f.label :address, 'Address <sup>*</sup>'.html_safe, class: 'col-md-4 control-label' %>
+
+                    <div class="col-md-6">
+                      <%= f.text_area :address, autofocus: true, class: 'form-control', placeholder: 'Address' %>
+                    </div>
+                  </div>
+
+                  <!-- Multiple Radios -->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label">Gender</label>
+
+                    <div class="col-md-6">
+                      <div class="radio">
+                        <label><%= f.radio_button :gender, :male, checked: true %> Male </label>
+                      </div>
+                      <div class="radio">
+                        <label><%= f.radio_button :gender, :female %> Female </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Text input-->
+                  <div class="form-group">
+                    <%= f.label :company_name, 'Company Name'.html_safe, class: 'col-md-4 control-label' %>
+
+                    <div class="col-md-6">
+                      <%= f.text_field :company_name, autofocus: true, class: 'form-control input-md', placeholder: 'Company Name' %>
+                    </div>
+                  </div>
+
+                  <!-- Textarea -->
+                  <div class="form-group">
+                    <%= f.label :company_details, 'Company Details'.html_safe, class: 'col-md-4 control-label' %>
+
+                    <div class="col-md-6">
+                      <%= f.text_area :company_details, autofocus: true, class: 'form-control', placeholder: 'Company Details' %>
+                    </div>
+                  </div>
+
+                  <div class="form-group required">
+                    <%= f.label :email, 'Email <sup>*</sup>'.html_safe, class: 'col-md-4 control-label' %>
+
+                    <div class="col-md-6">
+                      <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'Email' %>
+                    </div>
+                  </div>
+                  <div class="form-group required">
+                    <%= f.label :password, 'Password <sup>*</sup>'.html_safe, class: 'col-md-4 control-label' %>
+
+                    <div class="col-md-6">
+                      <%= f.password_field :password, autocomplete: 'off', class: 'form-control', placeholder: 'Password' %>
+
+                      <% if @minimum_password_length %>
+                        <p class="help-block">At least <%= @minimum_password_length %> characters</p>
+                      <% end %>
+                    </div>
+                  </div>
+                  <div class="form-group required">
+                    <%= f.label :password_confirmation, 'Confirm Password <sup>*</sup>'.html_safe, class: 'col-md-4 control-label' %>
+
+                    <div class="col-md-6">
+                      <%= f.password_field :password_confirmation, autocomplete: 'off', class: 'form-control', placeholder: 'Password' %>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+
+                    <div class="col-md-8">
+                      <div class="termbox mb10">
+                        <label class="checkbox-inline" for="checkboxes-1">
+                          <input name="checkboxes" id="checkboxes-1" value="1" type="checkbox">
+                          I have read and agree to the <a href="terms-conditions.html">Terms & Conditions</a>
+                        </label>
+                      </div>
+                      <div style="clear:both"></div>
+                      <%= f.submit 'Register', class: 'btn btn-primary' %>
+                    </div>
+                  </div>
+                </fieldset>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.page-content -->
+
+      <div class="col-md-4 reg-sidebar">
+        <div class="reg-sidebar-inner text-center">
+          <div class="promo-text-box"><i class=" icon-picture fa fa-4x icon-color-1"></i>
+
+            <h3><strong>Post a Free Crop Listing</strong></h3>
+
+            <p> Post your free online crop listing with us. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+          </div>
+          <div class="promo-text-box"><i class=" icon-pencil-circled fa fa-4x icon-color-2"></i>
+
+            <h3><strong>Create and Manage Farm Records</strong></h3>
+
+            <p> Nam sit amet dui vel orci venenatis ullamcorper eget in lacus. Praesent tristique elit pharetra magna efficitur laoreet.</p>
+          </div>
+          <div class="promo-text-box"><i class="  icon-heart-2 fa fa-4x icon-color-3"></i>
+
+            <h3><strong>Verify Crop Health</strong></h3>
+
+            <p> PostNullam quis orci ut ipsum mollis malesuada varius eget metus. Nulla aliquet dui sed quam iaculis, ut finibus massa tincidunt.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+  <!-- /.container -->
+</div>
+<!-- /.main-container -->
