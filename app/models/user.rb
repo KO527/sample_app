@@ -7,15 +7,16 @@ class User < ActiveRecord::Base
   enum role: [:buyer, :seller]
   enum gender: [:male, :female]
 
-  validates :categories, presence: true, uniqueness: true, if: :role.inspect => :seller?
-  validates :preferences, presence: true, uniqueness: {scope: :category}, if: :role.inspect => :buyer?
+  validates :categories, presence: true, uniqueness: true, if: :seller?
+  validates :preferences, presence: true, uniqueness: {scope: :category}, if: :buyer?
 
   # if buyer, list past preferences 
    if :role.inspect == :buyer
    	has_many :preferences
-   if :role.inpsect == :seller
+   end
+   if :role.inspect == :seller
     has_many :categories
-
+   end
   #Find a way to reference preferences as a subset of categories
   # :preferences = :categories
 
