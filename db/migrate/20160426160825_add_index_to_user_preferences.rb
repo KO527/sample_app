@@ -1,5 +1,7 @@
+
+#Preference has to be unique because the resources allocated to specific locations on map will determine logistics like shipping.
 class AddIndexToUserPreferences < ActiveRecord::Migration
   def change
-  	add_index :users :Preferences, unique: true
+  	add_index :users, :Preferences, unique: true
   end
 end
