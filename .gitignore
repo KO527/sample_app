@@ -15,3 +15,10 @@
 /log/*
 !/log/.keep
 /tmp
+<<<<<<< HEAD
+=======
+
+
+#IntelliJ
+.idea
+>>>>>>> ace4c71dd6e517c16b6e041564183a4459ea9217
