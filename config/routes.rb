@@ -9,11 +9,10 @@ Rails.application.routes.draw do
   resources :categories
   resources :preferences
 
-  root to: 'static#home'
-  
-  #need to reference preferences model 
-  
 
+  root to: 'static#home'
+  get 'signout' => 'static#signout'	 	  
+  #need to reference preferences model  
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
