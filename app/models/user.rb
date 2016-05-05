@@ -7,9 +7,10 @@ class User < ActiveRecord::Base
   enum role: [:buyer, :seller]
   enum gender: [:male, :female]
 
+  validates :name, presence: true, length: {maximum: 50}
   validates :categories, presence: true, uniqueness: true, if: :seller?
   validates :preferences, presence: true, uniqueness: {scope: :category}, if: :buyer?
-
+  validates :email, presence: true, length: {maximum: 255}, uniqueness: true, format: { with: VALID_EMAIL_REGEX }
   # if buyer, list past preferences 
    if :role.inspect == :buyer
    	has_many :preferences
