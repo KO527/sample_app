@@ -1,3 +1,4 @@
+<% provide(:title, 'nav')%>
 <div class="header">
   <nav class="navbar   navbar-site navbar-default" role="navigation">
     <div class="container">
@@ -18,10 +19,8 @@
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-            <li><a href="#">Signout <i class="glyphicon glyphicon-off"></i> </a></li>
+            <li><%= link_to 'Signout', 'signout_path'%><i class="glyphicon glyphicon-off"></i></li>
             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
-<!--               current_user[:email]-->
-                   <%#= link_to #{role.name}', #need to refer to user profile settings page here %>
               <i class="icon-user fa"></i> <i class=" icon-down-open-big fa"></i></a>
               <ul class="dropdown-menu user-menu">
                 <li class="active">
