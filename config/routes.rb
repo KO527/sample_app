@@ -11,6 +11,9 @@ Rails.application.routes.draw do
 
   root to: 'static#home'
   
+  get 'signup' => 'users#new'
+  get 'signout' => 'users#signout'
+
   #need to reference preferences model 
   
 
