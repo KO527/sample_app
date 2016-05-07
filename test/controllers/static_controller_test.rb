@@ -4,6 +4,7 @@ class StaticControllerTest < ActionController::TestCase
   test "should get nav" do
   	get :home
   	assert_response :success
+  	assert_select "title", "nav"
   	assert_select "title", "home"
   	assert_select "a[href=?]", new_user_registration_path
     	assert_select "a[href=?]", new_user_session_path  
