@@ -5066,3 +5066,1066 @@ Completed 200 OK in 607ms (Views: 605.7ms | ActiveRecord: 0.0ms)
   [1m[35m (0.1ms)[0m  BEGIN
   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "71"], ["title", "Pigeon Eggs"], ["created_at", "2016-05-05 20:18:15.752890"], ["updated_at", "2016-05-05 20:18:15.752890"]]
   [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (267.7ms)[0m  [1mDROP DATABASE IF EXISTS "ag_development"[0m
+  [1m[35m (266.8ms)[0m  DROP DATABASE IF EXISTS "ag_test"
+  [1m[36m (347.7ms)[0m  [1mCREATE DATABASE "ag_development" ENCODING = 'utf8'[0m
+  [1m[35m (247.2ms)[0m  CREATE DATABASE "ag_test" ENCODING = 'utf8'
+  [1m[36mSQL (2.0ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (22.8ms)[0m  CREATE TABLE "categories" ("id" serial primary key, "title" character varying, "ancestry" character varying, "image_id" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.0ms)[0m  [1mCREATE  INDEX  "index_categories_on_ancestry" ON "categories" USING btree ("ancestry")[0m
+  [1m[35m (1.7ms)[0m  CREATE  INDEX  "index_categories_on_title" ON "categories" USING btree ("title")
+  [1m[36m (10.3ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "role" integer, "first_name" character varying, "last_name" character varying, "phone_number" character varying, "gender" integer, "address" character varying, "company_name" character varying, "company_details" text, "latitude" float, "longitude" float, "Preferences" text) [0m
+  [1m[35m (3.0ms)[0m  CREATE UNIQUE INDEX  "index_users_on_Preferences" ON "users" USING btree ("Preferences")
+  [1m[36m (1.9ms)[0m  [1mCREATE  INDEX  "index_users_on_company_name" ON "users" USING btree ("company_name")[0m
+  [1m[35m (2.0ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (2.4ms)[0m  [1mCREATE  INDEX  "index_users_on_first_name" ON "users" USING btree ("first_name")[0m
+  [1m[35m (1.9ms)[0m  CREATE  INDEX  "index_users_on_last_name" ON "users" USING btree ("last_name")
+  [1m[36m (1.7ms)[0m  [1mCREATE  INDEX  "index_users_on_phone_number" ON "users" USING btree ("phone_number")[0m
+  [1m[35m (2.0ms)[0m  CREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")
+  [1m[36m (1.6ms)[0m  [1mCREATE  INDEX  "index_users_on_role" ON "users" USING btree ("role")[0m
+  [1m[35m (3.9ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (2.0ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (1.0ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160426160825')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160404174625')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160404184902')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160407193154')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160407194410')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160426152456')
+  [1m[36mSQL (0.7ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (14.1ms)[0m  CREATE TABLE "categories" ("id" serial primary key, "title" character varying, "ancestry" character varying, "image_id" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (2.2ms)[0m  [1mCREATE  INDEX  "index_categories_on_ancestry" ON "categories" USING btree ("ancestry")[0m
+  [1m[35m (1.7ms)[0m  CREATE  INDEX  "index_categories_on_title" ON "categories" USING btree ("title")
+  [1m[36m (9.7ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "role" integer, "first_name" character varying, "last_name" character varying, "phone_number" character varying, "gender" integer, "address" character varying, "company_name" character varying, "company_details" text, "latitude" float, "longitude" float, "Preferences" text) [0m
+  [1m[35m (2.2ms)[0m  CREATE UNIQUE INDEX  "index_users_on_Preferences" ON "users" USING btree ("Preferences")
+  [1m[36m (1.9ms)[0m  [1mCREATE  INDEX  "index_users_on_company_name" ON "users" USING btree ("company_name")[0m
+  [1m[35m (2.2ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (1.6ms)[0m  [1mCREATE  INDEX  "index_users_on_first_name" ON "users" USING btree ("first_name")[0m
+  [1m[35m (1.7ms)[0m  CREATE  INDEX  "index_users_on_last_name" ON "users" USING btree ("last_name")
+  [1m[36m (2.0ms)[0m  [1mCREATE  INDEX  "index_users_on_phone_number" ON "users" USING btree ("phone_number")[0m
+  [1m[35m (2.1ms)[0m  CREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")
+  [1m[36m (1.9ms)[0m  [1mCREATE  INDEX  "index_users_on_role" ON "users" USING btree ("role")[0m
+  [1m[35m (3.9ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (2.0ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.8ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160426160825')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160404174625')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160404184902')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160407193154')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160407194410')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160426152456')
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Staples"], ["created_at", "2016-05-06 14:38:25.851271"], ["updated_at", "2016-05-06 14:38:25.851271"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "1"], ["title", "Maize"], ["created_at", "2016-05-06 14:38:25.856782"], ["updated_at", "2016-05-06 14:38:25.856782"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "1"], ["title", "Millet"], ["created_at", "2016-05-06 14:38:25.859482"], ["updated_at", "2016-05-06 14:38:25.859482"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "1"], ["title", "Sorghum"], ["created_at", "2016-05-06 14:38:25.862026"], ["updated_at", "2016-05-06 14:38:25.862026"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "1"], ["title", "Rice"], ["created_at", "2016-05-06 14:38:25.864334"], ["updated_at", "2016-05-06 14:38:25.864334"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "1"], ["title", "Wheat"], ["created_at", "2016-05-06 14:38:25.866659"], ["updated_at", "2016-05-06 14:38:25.866659"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "1"], ["title", "Cassava"], ["created_at", "2016-05-06 14:38:25.868949"], ["updated_at", "2016-05-06 14:38:25.868949"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "1"], ["title", "Yam"], ["created_at", "2016-05-06 14:38:25.871237"], ["updated_at", "2016-05-06 14:38:25.871237"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "1"], ["title", "Cocoyam"], ["created_at", "2016-05-06 14:38:25.873493"], ["updated_at", "2016-05-06 14:38:25.873493"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "1"], ["title", "Sweet Potato"], ["created_at", "2016-05-06 14:38:25.875897"], ["updated_at", "2016-05-06 14:38:25.875897"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "1"], ["title", "Potato"], ["created_at", "2016-05-06 14:38:25.878188"], ["updated_at", "2016-05-06 14:38:25.878188"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "1"], ["title", "Plantain"], ["created_at", "2016-05-06 14:38:25.880346"], ["updated_at", "2016-05-06 14:38:25.880346"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Nuts and Seeds"], ["created_at", "2016-05-06 14:38:25.882438"], ["updated_at", "2016-05-06 14:38:25.882438"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "13"], ["title", "Groundnut (Peanut)"], ["created_at", "2016-05-06 14:38:25.884704"], ["updated_at", "2016-05-06 14:38:25.884704"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "13"], ["title", "Soya Beans"], ["created_at", "2016-05-06 14:38:25.886908"], ["updated_at", "2016-05-06 14:38:25.886908"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "13"], ["title", "Chili Peppers"], ["created_at", "2016-05-06 14:38:25.889158"], ["updated_at", "2016-05-06 14:38:25.889158"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "13"], ["title", "Sesame"], ["created_at", "2016-05-06 14:38:25.891602"], ["updated_at", "2016-05-06 14:38:25.891602"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "13"], ["title", "Green Corn"], ["created_at", "2016-05-06 14:38:25.893942"], ["updated_at", "2016-05-06 14:38:25.893942"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "13"], ["title", "Coconut"], ["created_at", "2016-05-06 14:38:25.896775"], ["updated_at", "2016-05-06 14:38:25.896775"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "13"], ["title", "Kola Nut"], ["created_at", "2016-05-06 14:38:25.899144"], ["updated_at", "2016-05-06 14:38:25.899144"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "13"], ["title", "Cashew Nut"], ["created_at", "2016-05-06 14:38:25.901464"], ["updated_at", "2016-05-06 14:38:25.901464"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "13"], ["title", "Tobacco Leaves"], ["created_at", "2016-05-06 14:38:25.903785"], ["updated_at", "2016-05-06 14:38:25.903785"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "13"], ["title", "Sunflower Seeds"], ["created_at", "2016-05-06 14:38:25.905987"], ["updated_at", "2016-05-06 14:38:25.905987"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "13"], ["title", "Rapeseed"], ["created_at", "2016-05-06 14:38:25.908226"], ["updated_at", "2016-05-06 14:38:25.908226"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "13"], ["title", "Bitter Kola"], ["created_at", "2016-05-06 14:38:25.910446"], ["updated_at", "2016-05-06 14:38:25.910446"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "13"], ["title", "Garcinia Kola"], ["created_at", "2016-05-06 14:38:25.912653"], ["updated_at", "2016-05-06 14:38:25.912653"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "13"], ["title", "Canola"], ["created_at", "2016-05-06 14:38:25.914878"], ["updated_at", "2016-05-06 14:38:25.914878"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "13"], ["title", "Sunflower Seeds"], ["created_at", "2016-05-06 14:38:25.917105"], ["updated_at", "2016-05-06 14:38:25.917105"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "13"], ["title", "Walnuts"], ["created_at", "2016-05-06 14:38:25.919429"], ["updated_at", "2016-05-06 14:38:25.919429"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "13"], ["title", "Dried Hibiscus Flower"], ["created_at", "2016-05-06 14:38:25.921724"], ["updated_at", "2016-05-06 14:38:25.921724"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "13"], ["title", "Banana"], ["created_at", "2016-05-06 14:38:25.924037"], ["updated_at", "2016-05-06 14:38:25.924037"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["title", "Cash Crops"], ["created_at", "2016-05-06 14:38:25.926119"], ["updated_at", "2016-05-06 14:38:25.926119"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "32"], ["title", "Oil Palm Fruit"], ["created_at", "2016-05-06 14:38:25.928393"], ["updated_at", "2016-05-06 14:38:25.928393"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "32"], ["title", "Palm Kernels"], ["created_at", "2016-05-06 14:38:25.931453"], ["updated_at", "2016-05-06 14:38:25.931453"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "32"], ["title", "Palm Oil"], ["created_at", "2016-05-06 14:38:25.933767"], ["updated_at", "2016-05-06 14:38:25.933767"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "32"], ["title", "Palm Kernel Shell"], ["created_at", "2016-05-06 14:38:25.936021"], ["updated_at", "2016-05-06 14:38:25.936021"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "32"], ["title", "Coffee Beans"], ["created_at", "2016-05-06 14:38:25.938274"], ["updated_at", "2016-05-06 14:38:25.938274"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "32"], ["title", "Seed Cotton"], ["created_at", "2016-05-06 14:38:25.940469"], ["updated_at", "2016-05-06 14:38:25.940469"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "32"], ["title", "Cotton Lint"], ["created_at", "2016-05-06 14:38:25.942752"], ["updated_at", "2016-05-06 14:38:25.942752"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "32"], ["title", "Cotton Seed"], ["created_at", "2016-05-06 14:38:25.944991"], ["updated_at", "2016-05-06 14:38:25.944991"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "32"], ["title", "Cocoa Beans"], ["created_at", "2016-05-06 14:38:25.947207"], ["updated_at", "2016-05-06 14:38:25.947207"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "32"], ["title", "Rubber"], ["created_at", "2016-05-06 14:38:25.949430"], ["updated_at", "2016-05-06 14:38:25.949430"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "32"], ["title", "Sugar Cane"], ["created_at", "2016-05-06 14:38:25.951753"], ["updated_at", "2016-05-06 14:38:25.951753"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["title", "Vegetables and Fruits"], ["created_at", "2016-05-06 14:38:25.953957"], ["updated_at", "2016-05-06 14:38:25.953957"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "44"], ["title", "Carrot"], ["created_at", "2016-05-06 14:38:25.956508"], ["updated_at", "2016-05-06 14:38:25.956508"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "44"], ["title", "Cucumber"], ["created_at", "2016-05-06 14:38:25.959008"], ["updated_at", "2016-05-06 14:38:25.959008"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "44"], ["title", "Melon (Egusi)"], ["created_at", "2016-05-06 14:38:25.961373"], ["updated_at", "2016-05-06 14:38:25.961373"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "44"], ["title", "Papaya (PawPaw)"], ["created_at", "2016-05-06 14:38:25.963954"], ["updated_at", "2016-05-06 14:38:25.963954"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "44"], ["title", "Okra"], ["created_at", "2016-05-06 14:38:25.966148"], ["updated_at", "2016-05-06 14:38:25.966148"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "44"], ["title", "Mangoes"], ["created_at", "2016-05-06 14:38:25.968323"], ["updated_at", "2016-05-06 14:38:25.968323"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "44"], ["title", "Pineapples"], ["created_at", "2016-05-06 14:38:25.970486"], ["updated_at", "2016-05-06 14:38:25.970486"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "44"], ["title", "Onions"], ["created_at", "2016-05-06 14:38:25.972663"], ["updated_at", "2016-05-06 14:38:25.972663"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "44"], ["title", "Tomatoes"], ["created_at", "2016-05-06 14:38:25.974877"], ["updated_at", "2016-05-06 14:38:25.974877"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "44"], ["title", "Ginger"], ["created_at", "2016-05-06 14:38:25.977097"], ["updated_at", "2016-05-06 14:38:25.977097"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "44"], ["title", "Garlic"], ["created_at", "2016-05-06 14:38:25.979298"], ["updated_at", "2016-05-06 14:38:25.979298"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["title", "Farm Fisheries"], ["created_at", "2016-05-06 14:38:25.981351"], ["updated_at", "2016-05-06 14:38:25.981351"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "56"], ["title", "Tilapia"], ["created_at", "2016-05-06 14:38:25.984297"], ["updated_at", "2016-05-06 14:38:25.984297"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "56"], ["title", "Catfish"], ["created_at", "2016-05-06 14:38:25.986866"], ["updated_at", "2016-05-06 14:38:25.986866"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "56"], ["title", "Shrimps"], ["created_at", "2016-05-06 14:38:25.989061"], ["updated_at", "2016-05-06 14:38:25.989061"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "56"], ["title", "Snail"], ["created_at", "2016-05-06 14:38:25.991319"], ["updated_at", "2016-05-06 14:38:25.991319"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Livestock & Byproducts"], ["created_at", "2016-05-06 14:38:25.993324"], ["updated_at", "2016-05-06 14:38:25.993324"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "61"], ["title", "Cattle"], ["created_at", "2016-05-06 14:38:25.995903"], ["updated_at", "2016-05-06 14:38:25.995903"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "61"], ["title", "Goats"], ["created_at", "2016-05-06 14:38:25.998161"], ["updated_at", "2016-05-06 14:38:25.998161"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "61"], ["title", "Sheep"], ["created_at", "2016-05-06 14:38:26.000393"], ["updated_at", "2016-05-06 14:38:26.000393"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "61"], ["title", "Asses"], ["created_at", "2016-05-06 14:38:26.002626"], ["updated_at", "2016-05-06 14:38:26.002626"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "61"], ["title", "Horses"], ["created_at", "2016-05-06 14:38:26.004958"], ["updated_at", "2016-05-06 14:38:26.004958"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "61"], ["title", "Camels"], ["created_at", "2016-05-06 14:38:26.007171"], ["updated_at", "2016-05-06 14:38:26.007171"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "61"], ["title", "Cow Milk"], ["created_at", "2016-05-06 14:38:26.009544"], ["updated_at", "2016-05-06 14:38:26.009544"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "61"], ["title", "Goat Milk"], ["created_at", "2016-05-06 14:38:26.012221"], ["updated_at", "2016-05-06 14:38:26.012221"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "61"], ["title", "Pig"], ["created_at", "2016-05-06 14:38:26.014747"], ["updated_at", "2016-05-06 14:38:26.014747"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Poultry"], ["created_at", "2016-05-06 14:38:26.016846"], ["updated_at", "2016-05-06 14:38:26.016846"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "71"], ["title", "Chicken"], ["created_at", "2016-05-06 14:38:26.019052"], ["updated_at", "2016-05-06 14:38:26.019052"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "71"], ["title", "Chicken Eggs"], ["created_at", "2016-05-06 14:38:26.021274"], ["updated_at", "2016-05-06 14:38:26.021274"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "71"], ["title", "Duck"], ["created_at", "2016-05-06 14:38:26.023487"], ["updated_at", "2016-05-06 14:38:26.023487"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "71"], ["title", "Duck Eggs"], ["created_at", "2016-05-06 14:38:26.025720"], ["updated_at", "2016-05-06 14:38:26.025720"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "71"], ["title", "Goose"], ["created_at", "2016-05-06 14:38:26.027949"], ["updated_at", "2016-05-06 14:38:26.027949"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "71"], ["title", "Goose Eggs"], ["created_at", "2016-05-06 14:38:26.030399"], ["updated_at", "2016-05-06 14:38:26.030399"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "71"], ["title", "Quail"], ["created_at", "2016-05-06 14:38:26.032717"], ["updated_at", "2016-05-06 14:38:26.032717"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "71"], ["title", "Quail Eggs"], ["created_at", "2016-05-06 14:38:26.034939"], ["updated_at", "2016-05-06 14:38:26.034939"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "71"], ["title", "Pigeon"], ["created_at", "2016-05-06 14:38:26.037233"], ["updated_at", "2016-05-06 14:38:26.037233"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "71"], ["title", "Pigeon Eggs"], ["created_at", "2016-05-06 14:38:26.039666"], ["updated_at", "2016-05-06 14:38:26.039666"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (4.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (2.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[36m (378.7ms)[0m  [1mDROP DATABASE IF EXISTS "ag_development"[0m
+  [1m[35m (283.9ms)[0m  DROP DATABASE IF EXISTS "ag_test"
+  [1m[36m (358.7ms)[0m  [1mCREATE DATABASE "ag_development" ENCODING = 'utf8'[0m
+  [1m[35m (247.4ms)[0m  CREATE DATABASE "ag_test" ENCODING = 'utf8'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (11.1ms)[0m  CREATE TABLE "categories" ("id" serial primary key, "title" character varying, "ancestry" character varying, "image_id" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (1.6ms)[0m  [1mCREATE  INDEX  "index_categories_on_ancestry" ON "categories" USING btree ("ancestry")[0m
+  [1m[35m (1.6ms)[0m  CREATE  INDEX  "index_categories_on_title" ON "categories" USING btree ("title")
+  [1m[36m (7.8ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "role" integer, "first_name" character varying, "last_name" character varying, "phone_number" character varying, "gender" integer, "address" character varying, "company_name" character varying, "company_details" text, "latitude" float, "longitude" float, "Preferences" text) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX  "index_users_on_Preferences" ON "users" USING btree ("Preferences")
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX  "index_users_on_company_name" ON "users" USING btree ("company_name")[0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX  "index_users_on_first_name" ON "users" USING btree ("first_name")[0m
+  [1m[35m (1.2ms)[0m  CREATE  INDEX  "index_users_on_last_name" ON "users" USING btree ("last_name")
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX  "index_users_on_phone_number" ON "users" USING btree ("phone_number")[0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX  "index_users_on_role" ON "users" USING btree ("role")[0m
+  [1m[35m (2.5ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (1.9ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.9ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160426160825')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160404174625')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160404184902')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160407193154')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160407194410')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160426152456')
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (9.3ms)[0m  CREATE TABLE "categories" ("id" serial primary key, "title" character varying, "ancestry" character varying, "image_id" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (2.3ms)[0m  [1mCREATE  INDEX  "index_categories_on_ancestry" ON "categories" USING btree ("ancestry")[0m
+  [1m[35m (1.1ms)[0m  CREATE  INDEX  "index_categories_on_title" ON "categories" USING btree ("title")
+  [1m[36m (5.7ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "role" integer, "first_name" character varying, "last_name" character varying, "phone_number" character varying, "gender" integer, "address" character varying, "company_name" character varying, "company_details" text, "latitude" float, "longitude" float, "Preferences" text) [0m
+  [1m[35m (1.5ms)[0m  CREATE UNIQUE INDEX  "index_users_on_Preferences" ON "users" USING btree ("Preferences")
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX  "index_users_on_company_name" ON "users" USING btree ("company_name")[0m
+  [1m[35m (4.0ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (1.5ms)[0m  [1mCREATE  INDEX  "index_users_on_first_name" ON "users" USING btree ("first_name")[0m
+  [1m[35m (1.2ms)[0m  CREATE  INDEX  "index_users_on_last_name" ON "users" USING btree ("last_name")
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX  "index_users_on_phone_number" ON "users" USING btree ("phone_number")[0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")
+  [1m[36m (1.4ms)[0m  [1mCREATE  INDEX  "index_users_on_role" ON "users" USING btree ("role")[0m
+  [1m[35m (2.1ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160426160825')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160404174625')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160404184902')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160407193154')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160407194410')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160426152456')
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Staples"], ["created_at", "2016-05-06 17:15:37.257971"], ["updated_at", "2016-05-06 17:15:37.257971"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "1"], ["title", "Maize"], ["created_at", "2016-05-06 17:15:37.262480"], ["updated_at", "2016-05-06 17:15:37.262480"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "1"], ["title", "Millet"], ["created_at", "2016-05-06 17:15:37.265261"], ["updated_at", "2016-05-06 17:15:37.265261"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "1"], ["title", "Sorghum"], ["created_at", "2016-05-06 17:15:37.267652"], ["updated_at", "2016-05-06 17:15:37.267652"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "1"], ["title", "Rice"], ["created_at", "2016-05-06 17:15:37.270096"], ["updated_at", "2016-05-06 17:15:37.270096"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "1"], ["title", "Wheat"], ["created_at", "2016-05-06 17:15:37.273057"], ["updated_at", "2016-05-06 17:15:37.273057"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "1"], ["title", "Cassava"], ["created_at", "2016-05-06 17:15:37.275403"], ["updated_at", "2016-05-06 17:15:37.275403"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "1"], ["title", "Yam"], ["created_at", "2016-05-06 17:15:37.277699"], ["updated_at", "2016-05-06 17:15:37.277699"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "1"], ["title", "Cocoyam"], ["created_at", "2016-05-06 17:15:37.280115"], ["updated_at", "2016-05-06 17:15:37.280115"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "1"], ["title", "Sweet Potato"], ["created_at", "2016-05-06 17:15:37.282629"], ["updated_at", "2016-05-06 17:15:37.282629"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "1"], ["title", "Potato"], ["created_at", "2016-05-06 17:15:37.284839"], ["updated_at", "2016-05-06 17:15:37.284839"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "1"], ["title", "Plantain"], ["created_at", "2016-05-06 17:15:37.286989"], ["updated_at", "2016-05-06 17:15:37.286989"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Nuts and Seeds"], ["created_at", "2016-05-06 17:15:37.289101"], ["updated_at", "2016-05-06 17:15:37.289101"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "13"], ["title", "Groundnut (Peanut)"], ["created_at", "2016-05-06 17:15:37.291914"], ["updated_at", "2016-05-06 17:15:37.291914"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "13"], ["title", "Soya Beans"], ["created_at", "2016-05-06 17:15:37.294171"], ["updated_at", "2016-05-06 17:15:37.294171"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "13"], ["title", "Chili Peppers"], ["created_at", "2016-05-06 17:15:37.296528"], ["updated_at", "2016-05-06 17:15:37.296528"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "13"], ["title", "Sesame"], ["created_at", "2016-05-06 17:15:37.298811"], ["updated_at", "2016-05-06 17:15:37.298811"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "13"], ["title", "Green Corn"], ["created_at", "2016-05-06 17:15:37.301086"], ["updated_at", "2016-05-06 17:15:37.301086"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "13"], ["title", "Coconut"], ["created_at", "2016-05-06 17:15:37.303355"], ["updated_at", "2016-05-06 17:15:37.303355"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "13"], ["title", "Kola Nut"], ["created_at", "2016-05-06 17:15:37.306312"], ["updated_at", "2016-05-06 17:15:37.306312"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "13"], ["title", "Cashew Nut"], ["created_at", "2016-05-06 17:15:37.308728"], ["updated_at", "2016-05-06 17:15:37.308728"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "13"], ["title", "Tobacco Leaves"], ["created_at", "2016-05-06 17:15:37.310941"], ["updated_at", "2016-05-06 17:15:37.310941"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "13"], ["title", "Sunflower Seeds"], ["created_at", "2016-05-06 17:15:37.313241"], ["updated_at", "2016-05-06 17:15:37.313241"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "13"], ["title", "Rapeseed"], ["created_at", "2016-05-06 17:15:37.315663"], ["updated_at", "2016-05-06 17:15:37.315663"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "13"], ["title", "Bitter Kola"], ["created_at", "2016-05-06 17:15:37.318039"], ["updated_at", "2016-05-06 17:15:37.318039"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "13"], ["title", "Garcinia Kola"], ["created_at", "2016-05-06 17:15:37.320463"], ["updated_at", "2016-05-06 17:15:37.320463"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "13"], ["title", "Canola"], ["created_at", "2016-05-06 17:15:37.322892"], ["updated_at", "2016-05-06 17:15:37.322892"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "13"], ["title", "Sunflower Seeds"], ["created_at", "2016-05-06 17:15:37.325144"], ["updated_at", "2016-05-06 17:15:37.325144"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "13"], ["title", "Walnuts"], ["created_at", "2016-05-06 17:15:37.327535"], ["updated_at", "2016-05-06 17:15:37.327535"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "13"], ["title", "Dried Hibiscus Flower"], ["created_at", "2016-05-06 17:15:37.329829"], ["updated_at", "2016-05-06 17:15:37.329829"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "13"], ["title", "Banana"], ["created_at", "2016-05-06 17:15:37.332494"], ["updated_at", "2016-05-06 17:15:37.332494"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["title", "Cash Crops"], ["created_at", "2016-05-06 17:15:37.334736"], ["updated_at", "2016-05-06 17:15:37.334736"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "32"], ["title", "Oil Palm Fruit"], ["created_at", "2016-05-06 17:15:37.337060"], ["updated_at", "2016-05-06 17:15:37.337060"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "32"], ["title", "Palm Kernels"], ["created_at", "2016-05-06 17:15:37.339354"], ["updated_at", "2016-05-06 17:15:37.339354"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "32"], ["title", "Palm Oil"], ["created_at", "2016-05-06 17:15:37.342040"], ["updated_at", "2016-05-06 17:15:37.342040"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "32"], ["title", "Palm Kernel Shell"], ["created_at", "2016-05-06 17:15:37.344928"], ["updated_at", "2016-05-06 17:15:37.344928"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "32"], ["title", "Coffee Beans"], ["created_at", "2016-05-06 17:15:37.347226"], ["updated_at", "2016-05-06 17:15:37.347226"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "32"], ["title", "Seed Cotton"], ["created_at", "2016-05-06 17:15:37.349763"], ["updated_at", "2016-05-06 17:15:37.349763"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "32"], ["title", "Cotton Lint"], ["created_at", "2016-05-06 17:15:37.353143"], ["updated_at", "2016-05-06 17:15:37.353143"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "32"], ["title", "Cotton Seed"], ["created_at", "2016-05-06 17:15:37.356011"], ["updated_at", "2016-05-06 17:15:37.356011"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "32"], ["title", "Cocoa Beans"], ["created_at", "2016-05-06 17:15:37.358647"], ["updated_at", "2016-05-06 17:15:37.358647"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "32"], ["title", "Rubber"], ["created_at", "2016-05-06 17:15:37.360951"], ["updated_at", "2016-05-06 17:15:37.360951"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "32"], ["title", "Sugar Cane"], ["created_at", "2016-05-06 17:15:37.363202"], ["updated_at", "2016-05-06 17:15:37.363202"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["title", "Vegetables and Fruits"], ["created_at", "2016-05-06 17:15:37.365359"], ["updated_at", "2016-05-06 17:15:37.365359"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "44"], ["title", "Carrot"], ["created_at", "2016-05-06 17:15:37.367867"], ["updated_at", "2016-05-06 17:15:37.367867"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "44"], ["title", "Cucumber"], ["created_at", "2016-05-06 17:15:37.370138"], ["updated_at", "2016-05-06 17:15:37.370138"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "44"], ["title", "Melon (Egusi)"], ["created_at", "2016-05-06 17:15:37.372377"], ["updated_at", "2016-05-06 17:15:37.372377"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "44"], ["title", "Papaya (PawPaw)"], ["created_at", "2016-05-06 17:15:37.374598"], ["updated_at", "2016-05-06 17:15:37.374598"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "44"], ["title", "Okra"], ["created_at", "2016-05-06 17:15:37.376851"], ["updated_at", "2016-05-06 17:15:37.376851"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "44"], ["title", "Mangoes"], ["created_at", "2016-05-06 17:15:37.379154"], ["updated_at", "2016-05-06 17:15:37.379154"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "44"], ["title", "Pineapples"], ["created_at", "2016-05-06 17:15:37.381803"], ["updated_at", "2016-05-06 17:15:37.381803"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "44"], ["title", "Onions"], ["created_at", "2016-05-06 17:15:37.384532"], ["updated_at", "2016-05-06 17:15:37.384532"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "44"], ["title", "Tomatoes"], ["created_at", "2016-05-06 17:15:37.387126"], ["updated_at", "2016-05-06 17:15:37.387126"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "44"], ["title", "Ginger"], ["created_at", "2016-05-06 17:15:37.389542"], ["updated_at", "2016-05-06 17:15:37.389542"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "44"], ["title", "Garlic"], ["created_at", "2016-05-06 17:15:37.391990"], ["updated_at", "2016-05-06 17:15:37.391990"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["title", "Farm Fisheries"], ["created_at", "2016-05-06 17:15:37.395055"], ["updated_at", "2016-05-06 17:15:37.395055"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "56"], ["title", "Tilapia"], ["created_at", "2016-05-06 17:15:37.398050"], ["updated_at", "2016-05-06 17:15:37.398050"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "56"], ["title", "Catfish"], ["created_at", "2016-05-06 17:15:37.400593"], ["updated_at", "2016-05-06 17:15:37.400593"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "56"], ["title", "Shrimps"], ["created_at", "2016-05-06 17:15:37.402869"], ["updated_at", "2016-05-06 17:15:37.402869"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "56"], ["title", "Snail"], ["created_at", "2016-05-06 17:15:37.405181"], ["updated_at", "2016-05-06 17:15:37.405181"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Livestock & Byproducts"], ["created_at", "2016-05-06 17:15:37.407519"], ["updated_at", "2016-05-06 17:15:37.407519"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "61"], ["title", "Cattle"], ["created_at", "2016-05-06 17:15:37.410145"], ["updated_at", "2016-05-06 17:15:37.410145"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "61"], ["title", "Goats"], ["created_at", "2016-05-06 17:15:37.412600"], ["updated_at", "2016-05-06 17:15:37.412600"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "61"], ["title", "Sheep"], ["created_at", "2016-05-06 17:15:37.414993"], ["updated_at", "2016-05-06 17:15:37.414993"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "61"], ["title", "Asses"], ["created_at", "2016-05-06 17:15:37.417243"], ["updated_at", "2016-05-06 17:15:37.417243"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "61"], ["title", "Horses"], ["created_at", "2016-05-06 17:15:37.419735"], ["updated_at", "2016-05-06 17:15:37.419735"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "61"], ["title", "Camels"], ["created_at", "2016-05-06 17:15:37.422345"], ["updated_at", "2016-05-06 17:15:37.422345"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "61"], ["title", "Cow Milk"], ["created_at", "2016-05-06 17:15:37.424556"], ["updated_at", "2016-05-06 17:15:37.424556"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "61"], ["title", "Goat Milk"], ["created_at", "2016-05-06 17:15:37.426830"], ["updated_at", "2016-05-06 17:15:37.426830"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "61"], ["title", "Pig"], ["created_at", "2016-05-06 17:15:37.429099"], ["updated_at", "2016-05-06 17:15:37.429099"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Poultry"], ["created_at", "2016-05-06 17:15:37.431159"], ["updated_at", "2016-05-06 17:15:37.431159"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "71"], ["title", "Chicken"], ["created_at", "2016-05-06 17:15:37.433815"], ["updated_at", "2016-05-06 17:15:37.433815"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "71"], ["title", "Chicken Eggs"], ["created_at", "2016-05-06 17:15:37.436370"], ["updated_at", "2016-05-06 17:15:37.436370"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "71"], ["title", "Duck"], ["created_at", "2016-05-06 17:15:37.438680"], ["updated_at", "2016-05-06 17:15:37.438680"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "71"], ["title", "Duck Eggs"], ["created_at", "2016-05-06 17:15:37.440977"], ["updated_at", "2016-05-06 17:15:37.440977"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "71"], ["title", "Goose"], ["created_at", "2016-05-06 17:15:37.443662"], ["updated_at", "2016-05-06 17:15:37.443662"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "71"], ["title", "Goose Eggs"], ["created_at", "2016-05-06 17:15:37.446742"], ["updated_at", "2016-05-06 17:15:37.446742"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "71"], ["title", "Quail"], ["created_at", "2016-05-06 17:15:37.449225"], ["updated_at", "2016-05-06 17:15:37.449225"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "71"], ["title", "Quail Eggs"], ["created_at", "2016-05-06 17:15:37.451478"], ["updated_at", "2016-05-06 17:15:37.451478"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "71"], ["title", "Pigeon"], ["created_at", "2016-05-06 17:15:37.453763"], ["updated_at", "2016-05-06 17:15:37.453763"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("ancestry", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "71"], ["title", "Pigeon Eggs"], ["created_at", "2016-05-06 17:15:37.456079"], ["updated_at", "2016-05-06 17:15:37.456079"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (5.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.6ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChangeRoleFormatInMyTable (20160506210208)
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (4.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160506210208"]]
+  [1m[35m (116.1ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (4.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (4.1ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (4.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (5.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChangeRoleFormatInUsersTable (20160507191257)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (41.3ms)[0m  [1mALTER TABLE "users" ALTER COLUMN "role" TYPE character varying[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160507191257"]]
+  [1m[36m (155.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (4.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPreferencesToUser (20160507211520)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (5.6ms)[0m  [1mALTER TABLE "users" ADD "preferences" character varying[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160507211520"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (5.1ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPreferencesToUser (20160507212541)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (5.3ms)[0m  [1mALTER TABLE "users" ADD "preferences" character varying[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPreferencesToUser (20160507212541)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "users" ADD "preferences" character varying[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (4.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (4.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPreferencesToUser (20160507212541)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.2ms)[0m  [1mALTER TABLE "users" ADD "preferences" character varying[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPreferencesToUser (20160507212541)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "users" ADD "preferences" character varying[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPreferencesToUser (20160507212541)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (2.4ms)[0m  [1mALTER TABLE "users" ADD "preferences" character varying[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPreferencesToUser (20160507212541)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "users" ADD "preferences" character varying[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemovePreferencesFromUser (20160507214508)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (4.7ms)[0m  [1mALTER TABLE "users" DROP "preferences"[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160507214508"]]
+  [1m[36m (137.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (4.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.2ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPreferencesToUser (20160507215626)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "users" ADD "preferences" character varying[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160507215626"]]
+  [1m[36m (3.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (4.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddIndexToUserPreferences (20160507220533)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (5.6ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_preferences" ON "users"  ("preferences")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160507220533"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (5.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (5.1ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemovePreferencesFromUser (20160507221620)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (4.6ms)[0m  [1mALTER TABLE "users" DROP "Preferences"[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160507221620"]]
+  [1m[36m (2.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (7.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (5.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemovePreferencesFromUser (20160507221620)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "users" ADD "Preferences" text[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1  [["version", "20160507221620"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (5.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemovePreferencesFromUser (20160507221620)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.1ms)[0m  [1mALTER TABLE "users" DROP "Preferences"[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160507221620"]]
+  [1m[36m (2.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (4.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
