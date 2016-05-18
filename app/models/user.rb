@@ -7,18 +7,21 @@ class User < ActiveRecord::Base
   enum role: ["buyer", "seller"]
   enum gender: ["male", "female"]
 
+  has_many :preferences, through: :categories
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i;
   validates :first_name, presence: true, length: {maximum: 15}
   validates :last_name, presence: true, length: {maximum: 15}
-  validates :categories, presence: true, uniqueness: true, if: :seller?
-  validates :preferences, uniqueness: {scope: :categories}, if: :buyer?
+  validates :crop_share, uniqueness: true, unless: "buyer?"
+  validates :categories, presence: true, uniqueness: true
   validates :email, presence: true, length: {maximum: 255}, uniqueness: true, format: { with: VALID_EMAIL_REGEX }
   # if buyer, list past preferences 
-   if :role.inspect == "buyer"
-   	has_many :preferences
-   end
    if :role.inspect == "seller"
+   	has_many :categories
+   	has_many :crop_shares
+   end
+   if :role.inspect == "buyer"
     	has_many :categories
+    	has_many :preferences
    end
   #Find a way to reference preferences as a subset of categories
   # :preferences = :categories
@@ -27,3 +30,4 @@ class User < ActiveRecord::Base
   after_validation :geocode
 
 end
+
