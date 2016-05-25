@@ -1,33 +1,8 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
-
-  enum role: ["buyer", "seller"]
-  enum gender: ["male", "female"]
-
-  has_many :preferences, through: :categories
-  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i;
-  validates :first_name, presence: true, length: {maximum: 15}
-  validates :last_name, presence: true, length: {maximum: 15}
-  validates :crop_share, uniqueness: true, unless: "buyer?"
-  validates :categories, presence: true, uniqueness: true
-  validates :email, presence: true, length: {maximum: 255}, uniqueness: true, format: { with: VALID_EMAIL_REGEX }
-  # if buyer, list past preferences 
-   if :role.inspect == "seller"
-   	has_many :categories
-   	has_many :crop_shares
-   end
-   if :role.inspect == "buyer"
-    	has_many :categories
-    	has_many :preferences
-   end
-  #Find a way to reference preferences as a subset of categories
-  # :preferences = :categories
-
-  geocoded_by :address
-  after_validation :geocode
-
+	before_save {self.email = email.downcase}
+	validates :name, presence: true, length: {maximum: 50}
+	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+	validates :email, presence: true, length:  {maximum: 255}, format: { with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
+	has_secure_password 
+	validates :password, presence: true, length: {minimum: 6}
 end
-
