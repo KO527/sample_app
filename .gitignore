@@ -18,3 +18,9 @@
 
 #Ignore spring files
 /spring/*.pid
+
+#Ignore environment files
+/config/initializers/app_environment_variables.rb
+
+# Ignore uploaded test images.
+/public/uploads
