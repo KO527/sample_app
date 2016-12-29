@@ -18,13 +18,20 @@ Rails.application.routes.draw do
 
   delete 'logout' => 'sessions#destroy'
 
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
 
   resources :microposts,		only: [:create, :destroy]
 
   resources :account_activations,	only: [:edit]
 
   resources :password_resets,		only: [:new, :create, :edit, :update]
+
+  resources :relationships,		only: [:create, :destroy]
+
 end 
 
   # The priority is based upon order of creation: first created -> highest priority.
